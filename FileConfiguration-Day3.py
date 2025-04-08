@@ -20,4 +20,4 @@ key_to_update = 'MAX_CONNECTIONS'
 new_value = '600'  # New maximum connections allowed
 
 # Update the server configuration file
-update_server_config(server_config_file, key_to_update, new_value)
+update_server_config(server_config_file, key_to_update, new_value) 
