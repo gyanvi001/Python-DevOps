@@ -9,8 +9,6 @@ URL = f'https://api.github.com/repos/kubernetes/kubernetes/pulls'
 #Get the pull req from github api
 response = requests.get(URL)
 
-
-
 #Only if the response is success 
 if(response.status_code == 200):
     #Convert into json format
@@ -35,8 +33,6 @@ if(response.status_code == 200):
 else:
      print(f"Failed to get the data. Status code: {response.status_code}")
      
- 
-
 
             
 
