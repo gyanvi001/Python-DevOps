@@ -7,8 +7,7 @@ import json
 url =  "https://gyanvi-pandey.atlassian.net/rest/api/3/issue"
 
 
-API_TOKEN = ""
-
+API_
 auth = HTTPBasicAuth("gyanvipandey1999@gmail.com", API_TOKEN)
 
 headers = {
