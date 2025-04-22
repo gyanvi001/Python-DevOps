@@ -14,6 +14,18 @@ MAX_BACKUPS = 5
 LogFile = "app.log"
 
 
+def rotate_logs():
+    if not os.path.exists:
+        print("Log file not found")
+        return
+    
+    log_size_mb = os.path.getsize(LogFile) / 1024*1024
+    if log_size_mb < MAX_LOG_SIZE:
+        print("No need to rotate the log file. Log File size within limit")
+
+    
+
+
 
 
 
