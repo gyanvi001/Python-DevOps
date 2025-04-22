@@ -22,6 +22,33 @@ def rotate_logs():
     log_size_mb = os.path.getsize(LogFile) / 1024*1024
     if log_size_mb < MAX_LOG_SIZE:
         print("No need to rotate the log file. Log File size within limit")
+        return
+    
+    print("Rotating Log File {LogFile}")
+
+    # Remove the oldest log if it exists
+    oldest_log = f"{LogFile}.{MAX_BACKUPS}"
+    if os.path.exists(oldest_log):
+        os.remove(oldest_log)
+
+    for i in range(MAX_BACKUPS-4, 0, -1):
+        src = f"{LogFile}.{i}"
+        des = f"{LogFile}.{i+1}"
+        if os.path.exists(src):
+            os.rename(src,des)
+
+    # Rename the current log to log.1
+    shutil.move(LogFile, f"{LogFile}.1")
+    
+    #Create a new empty logfile
+    open(LogFile, 'w').close()
+    print("Rotation_COmplete")
+
+    if __name__ == "__main__":
+    rotate_logs()
+
+
+
 
     
 
