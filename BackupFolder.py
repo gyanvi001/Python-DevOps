@@ -19,6 +19,3 @@ try:
     print ("Back up completed at {backup_folder}")
 except Exception as e:
     print("Error during backing {e}")
-
-
-
