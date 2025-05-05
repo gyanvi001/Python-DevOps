@@ -7,10 +7,9 @@ import os
 
 url = "https://gyanvi-pandey.atlassian.net/rest/api/3/project"
 
-#api_key = os.getenv("JIRA_TOKEN")
-#print(api_key)
+api_key = os.getenv("JIRA_TOKEN")
+print(api_key)
 
-and96B"
 
 auth = HTTPBasicAuth("gyanvipandey1999@gmail.com", api_key)
 
