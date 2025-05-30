@@ -18,7 +18,7 @@ mylist= []
 totalNumber = int(input("Average of how many numbers"))
 CollectNumbers(totalNumber)
 avg=calculateAverage()
-print(avg)
+print("Average is ", avg)
 
 
 
